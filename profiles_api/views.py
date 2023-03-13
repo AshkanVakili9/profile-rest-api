@@ -90,7 +90,8 @@ class HelloViewSet(viewsets.ViewSet):
         return Response({'http_method': 'DELETE'})
     
 class  UserProfileViewSet(viewsets.ModelViewSet):
-    """Handel createing and updating profiles"""
+    """Handel creating and updating profiles"""
+    
     serializer_class = serializers.UserProfileSerializer
     queryset = models.UserProfile.objects.all()
     authentication_classes = (TokenAuthentication,)
